@@ -1,5 +1,5 @@
 import React from "react";
-import { IntlProvider, addLocaleData } from "react-intl";
+import { IntlProvider } from "react-intl";
 import { connect } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "../Routes";

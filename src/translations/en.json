@@ -7,5 +7,8 @@
     "home": "Home",
     "pageNotFound": "Oops! We couldn't find what you were looking for",
     "resourceMoved": "It's possible the resource has moved.",
-    "gotoStart": "Go to Homepage"
+    "gotoStart": "Go to Homepage",
+    "language": "Language",
+    "english": "English",
+    "german": "German"
 }

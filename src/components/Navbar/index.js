@@ -68,15 +68,15 @@ const Navbar = (props) => {
           aria-haspopup='true'
           aria-expanded='false'
         >
-          Language
+          <FormattedMessage id='language' />
         </a>
 
         <div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
           <a class='dropdown-item' key='en' onClick={(e) => setLang("en")}>
-            English
+            <FormattedMessage id='english' />
           </a>
           <a class='dropdown-item' key='de' onClick={(e) => setLang("de")}>
-            Deutsch
+            <FormattedMessage id='german' />
           </a>
         </div>
       </div>
