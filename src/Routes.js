@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter, Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Landing from "./containers/Landing";
 import NotFound from "./containers/NotFound";
@@ -9,7 +8,6 @@ import NotFound from "./containers/NotFound";
 const Routes = () => {
   return (
     <main>
-      <Navbar />
       <Switch>
         <Route exact path='/' component={Landing} />
         <Route component={NotFound} />
