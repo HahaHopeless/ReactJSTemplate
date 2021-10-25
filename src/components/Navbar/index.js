@@ -73,9 +73,17 @@ const Navbar = (props) => {
 
         <div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
           <a class='dropdown-item' key='en' onClick={(e) => setLang("en")}>
+            <img
+              src={require("../../assets/icons/en.svg")}
+              style={{ width: "20px", marginRight: "5px" }}
+            />
             <FormattedMessage id='english' />
           </a>
           <a class='dropdown-item' key='de' onClick={(e) => setLang("de")}>
+            <img
+              src={require("../../assets/icons/de.svg")}
+              style={{ width: "20px", marginRight: "5px" }}
+            />
             <FormattedMessage id='german' />
           </a>
         </div>
