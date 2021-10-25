@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 
 function NotFound() {
   return (
-    <div className='container-fluid h-100 d-flex flex-column justify-content-center align-items-center'>
+    <div className='container-fluid h-100 min-vh-100 d-flex flex-column justify-content-center align-items-center'>
       <h1>
         <FormattedMessage id='pageNotFound' />
       </h1>
