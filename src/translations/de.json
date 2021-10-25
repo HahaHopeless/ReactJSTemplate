@@ -1,0 +1,11 @@
+{
+    "myApp": "Mein App",
+    "welcome": "Wilkommen!",
+    "builtBy": "Gebaut von Jo Santiago © 2020",
+    "login": "Anmeldung",
+    "register": "Registrieren",
+    "home": "Startseite",
+    "pageNotFound": "Huch! Wir konnten nicht finden, wonach Sie gesucht haben",
+    "resourceMoved": "Es ist möglich, dass die Ressource verschoben wurde.",
+    "gotoStart": "Zur Startseite"
+}

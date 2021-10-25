@@ -1,0 +1,11 @@
+{
+    "myApp": "My App",
+    "welcome": "Welcome!",
+    "builtBy": "Built by Jo Santiago © 2020",
+    "login": "Login",
+    "register": "Register",
+    "home": "Home",
+    "pageNotFound": "Oops! We couldn't find what you were looking for",
+    "resourceMoved": "It's possible the resource has moved.",
+    "gotoStart": "Go to Homepage"
+}

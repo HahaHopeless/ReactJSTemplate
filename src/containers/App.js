@@ -1,19 +1,23 @@
-import React from 'react';
-import configureStore from '../store';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Main from './Main';
+import React from "react";
+import { IntlProvider, addLocaleData } from "react-intl";
+import { connect } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "../Routes";
 
-const store = configureStore();
-
-const App = () => {
+const App = (props) => {
   return (
-    <Provider store={store}>
+    <IntlProvider messages={require(`../translations/${props.lang}.json`)}>
       <Router>
-        <Main />
+        <Routes />
       </Router>
-    </Provider>
+    </IntlProvider>
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    lang: state.languageReducer.lang,
+  };
+};
+
+export default connect(mapStateToProps, null)(App);
