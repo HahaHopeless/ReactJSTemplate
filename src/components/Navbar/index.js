@@ -1,93 +1,109 @@
+import "./styles.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import { setGlobalLanguage } from "../../store/actionTypes";
+import { useLocation } from "react-router-dom";
+import ReactAnime from "react-animejs";
 
 const Navbar = (props) => {
-  const [collapsedState, setCollapsedState] = useState(false);
-  const navClass = collapsedState
-    ? "collapse navbar-collapse show"
-    : "collapse navbar-collapse";
-  const togglerClass = collapsedState
-    ? "navbar-toggler collapsed"
-    : "navbar-toggler";
-  const toggleNav = () => {
-    setCollapsedState(!collapsedState);
-  };
+  const { Anime, stagger } = ReactAnime;
 
   const setLang = (e) => {
     props.setGlobalLanguage(e);
   };
 
-  return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-      <Link to='/' className='navbar-brand'>
-        <FormattedMessage id='myApp' />
-      </Link>
-      <button
-        className={togglerClass}
-        data-toggle='collapse'
-        data-target='#navbarSupportedContent'
-        aria-controls='navbarSupportedContent'
-        aria-expanded='false'
-        aria-label='Toggle navigation'
-        onClick={toggleNav}
-      >
-        <span className='navbar-toggler-icon'></span>
-      </button>
-      <div className={navClass} id='navbarSupportedContent'>
-        <ul className='navbar-nav mr-auto'>
-          <li className='nav-item active'>
-            <Link to='/' className='nav-link'>
-              <FormattedMessage id='home' />{" "}
-              <span className='sr-only'>(current)</span>
-            </Link>
-          </li>
-        </ul>
-        <div>
-          <Link to='/login'>
-            <button className='btn btn-secondary mr-3'>
-              <FormattedMessage id='login' />
-            </button>
-          </Link>
-          <Link to='/register'>
-            <button className='btn btn-primary'>
-              <FormattedMessage id='register' />
-            </button>
-          </Link>
-        </div>
-      </div>
-      <div className='dropdown show d-flex justify-content-center align-items-center'>
-        <a
-          className='btn btn-secondary dropdown-toggle'
-          href='#'
-          role='button'
-          id='dropdownMenuLink'
-          data-toggle='dropdown'
-          aria-haspopup='true'
-          aria-expanded='false'
-        >
-          <FormattedMessage id='language' />
-        </a>
+  var location = useLocation();
 
-        <div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
-          <a class='dropdown-item' key='en' onClick={(e) => setLang("en")}>
-            <img
-              src={require("../../assets/icons/en.svg")}
-              style={{ width: "20px", marginRight: "5px" }}
-            />
-            <FormattedMessage id='english' />
-          </a>
-          <a class='dropdown-item' key='de' onClick={(e) => setLang("de")}>
-            <img
-              src={require("../../assets/icons/de.svg")}
-              style={{ width: "20px", marginRight: "5px" }}
-            />
-            <FormattedMessage id='german' />
-          </a>
-        </div>
-      </div>
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      console.log("DOM fully loaded");
+    },
+    false
+  );
+
+  return (
+    <nav className='app-navbar pl-5 pr-5 pt-2 pb-2 ml-auto mr-auto'>
+      <ul className='d-flex justify-content-around align-items-center'>
+        <li>
+          <Link
+            to='/'
+            className={
+              location.pathname === "/" ? "app-link active" : "app-link"
+            }
+          >
+            <FormattedMessage id='home' />{" "}
+            <span className='sr-only'>(current)</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/about'
+            className={
+              location.pathname === "/about" ? "app-link active" : "app-link"
+            }
+          >
+            <FormattedMessage id='About' />{" "}
+            <span className='sr-only'>(current)</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/contact'
+            className={
+              location.pathname === "/contact" ? "app-link active" : "app-link"
+            }
+          >
+            <FormattedMessage id='contact' />{" "}
+            <span className='sr-only'>(current)</span>
+          </Link>
+        </li>
+        <li>
+          <div class='btn-group'>
+            <button
+              type='button'
+              class='btn btn-secondary btn-sm dropdown-toggle'
+              data-toggle='dropdown'
+              aria-haspopup='true'
+              aria-expanded='false'
+            >
+              <img
+                src={require("../../assets/icons/lang.svg")}
+                className='lang-icon mr-2'
+              />
+              <span>{props.lang.toUpperCase()}</span>
+            </button>
+            <div class='dropdown-menu'>
+              <a
+                class='dropdown-item'
+                onClick={() => {
+                  setLang("en");
+                }}
+              >
+                <img
+                  src={require("../../assets/icons/en.svg")}
+                  className='lang-icon'
+                />
+                <span>EN</span>
+              </a>
+              <a
+                class='dropdown-item'
+                onClick={() => {
+                  setLang("de");
+                }}
+              >
+                <img
+                  src={require("../../assets/icons/de.svg")}
+                  className='lang-icon'
+                />
+                <span>DE</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </nav>
   );
 };

@@ -1,7 +1,7 @@
 {
     "myApp": "My App",
     "welcome": "Welcome!",
-    "builtBy": "Built by Jo Santiago © 2020",
+    "builtBy": "Mohsin Kamal Akbar © 2021",
     "login": "Login",
     "register": "Register",
     "home": "Home",
@@ -10,5 +10,13 @@
     "gotoStart": "Go to Homepage",
     "language": "Language",
     "english": "English",
-    "german": "German"
+    "german": "German",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact",
+    "scroll": "Scroll",
+    "toSee": "To See",
+    "more": "MORE",
+    "helloIm": "Hi, I'm"
 }

@@ -1,0 +1,18 @@
+.download {
+  width: 150px;
+  border: 1px solid #3742fa;
+  border-radius: 10px;
+  height: 50px;
+  line-height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  color: rgba(47, 53, 66, 1);
+}
+.download:hover {
+  background: #3742fa;
+  color: white !important;
+}
