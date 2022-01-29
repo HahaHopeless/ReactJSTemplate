@@ -4,7 +4,6 @@ import { FormattedMessage } from "react-intl";
 import ReactAnime from "react-animejs";
 import ScrollUp from "../../components/ScrollUp";
 import Intro1 from "../../components/Intro1";
-import Intro2 from "../../components/Intro2";
 
 const Landing = () => {
   const { Anime, stagger } = ReactAnime;
@@ -25,7 +24,6 @@ const Landing = () => {
         <Intro1 />
         <div className='vh-100'></div>
         <div className='vh-100'></div>
-        {/* <Intro2 /> */}
       </div>
     </>
   );
