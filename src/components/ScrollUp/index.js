@@ -5,7 +5,6 @@ import Lottie from "react-lottie";
 import ReactAnime from "react-animejs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import animationData from "../../assets/animations/plants.json";
 
 const ScrollUp = (props) => {
   const { Anime, stagger } = ReactAnime;
