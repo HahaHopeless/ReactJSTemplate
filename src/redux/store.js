@@ -3,7 +3,7 @@ This is you Redux store. You don't have to do much here though. Just leave it as
 a new reducer, just add it in reducers->index.js file.
 */
 
-import rootReducer from "../reducers/index";
+import rootReducer from "./reducers/index";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 
