@@ -1,6 +1,6 @@
 /*
-All actions for the language are here. You can create a new file in the reducers folder for
-handling states in another page.
+All the initial states and state changes for the language are here. You can create 
+a new file in the reducers folder for handling states in another page.
 */
 
 import { SET_GLOBAL_LANGUAGE } from "../actions/lang";
