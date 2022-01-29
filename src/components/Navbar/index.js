@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
-import { setGlobalLanguage } from "../../store/actionTypes";
+import { setGlobalLanguage } from "../../actions/lang";
 import { useLocation } from "react-router-dom";
 import ReactAnime from "react-animejs";
 
@@ -110,7 +110,7 @@ const Navbar = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    lang: state.languageReducer.lang,
+    lang: state.lang.lang,
   };
 };
 

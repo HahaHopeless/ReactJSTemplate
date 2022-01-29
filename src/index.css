@@ -1,3 +1,10 @@
+:root {
+  --black: #2f3542;
+  --white: #ffffff;
+  --blue: #3742fa;
+  --no-color: rgba(0, 0, 0, 0);
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -13,7 +20,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ffffff;
+  background: var(--white);
 }
 
 a,
@@ -37,7 +44,7 @@ h5,
 h6,
 li,
 p {
-  color: #2f3542;
+  color: var(--black);
 }
 
 code {
