@@ -5,6 +5,7 @@ export const DOWNLOAD_FILE_FAILURE = "DOWNLOAD_FILE_FAILURE";
 export const downloadFile = (payload) => {
   return {
     type: "DOWNLOAD_FILE",
+    payload,
   };
 };
 export const downloadFileSuccess = (payload) => {

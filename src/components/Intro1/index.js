@@ -147,7 +147,10 @@ const Intro1 = (props) => {
               Boilerplate
             </h1>
             <br></br>
-            <div className='download' onClick={() => props.downloadFile()}>
+            <div
+              className='download'
+              onClick={() => props.downloadFile({ lang: props.lang })}
+            >
               <FontAwesomeIcon
                 icon={faFileDownload}
                 opacity={0.4}
@@ -179,6 +182,7 @@ const Intro1 = (props) => {
 const mapStateToProps = (state) => {
   return {
     isFileDownloadSuccess: state.home.isFileDownloadSuccess,
+    lang: state.lang.lang,
   };
 };
 

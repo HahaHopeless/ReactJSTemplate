@@ -19,5 +19,7 @@
     "toSee": "Sie um mehr",
     "more": "ZU SEHEN",
     "thisIs": "Dies ist ein",
-    "download": "Beispieldatei"
+    "download": "Beispieldatei",
+    "downloadFailure": "Es gab ein Problem beim Herunterladen der Datei 😵",
+    "downloadSuccess": "Datei erfolgreich heruntergeladen 😊"
 }

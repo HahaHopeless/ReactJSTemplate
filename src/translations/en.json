@@ -19,5 +19,7 @@
     "toSee": "To See",
     "more": "MORE",
     "thisIs": "This is a",
-    "download": "Sample File"
+    "download": "Sample File",
+    "downloadFailure": "There was a problem downloading the file 😵",
+    "downloadSuccess": "File downloaded successfully 😊"
 }
