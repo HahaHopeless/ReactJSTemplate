@@ -4,8 +4,7 @@ const http = axios.create();
 
 http.interceptors.request.use(
   async (req) => {
-    const originalRequest = req;
-    return originalRequest;
+    return req;
   },
   (err) => Promise.reject(err)
 );

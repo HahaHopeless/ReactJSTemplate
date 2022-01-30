@@ -22,8 +22,11 @@ function* downloadFile(action) {
       type: "application/pdf;charset=utf-8",
     });
     saveAs(blob, filename);
+    yield call(message.success, "File downloaded successfully");
+    yield put({ type: DOWNLOAD_FILE_SUCCESS });
   } catch (e) {
     yield call(message.error, "Error!!!");
+    yield put({ type: DOWNLOAD_FILE_SUCCESS });
   }
 }
 

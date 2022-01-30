@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Lottie from "react-lottie";
 import animationData from "../../assets/animations/orbit.json";
+import loadingAnimation from "../../assets/animations/loading.json";
 import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +17,11 @@ const Intro1 = (props) => {
     loop: true,
     autoplay: true,
     animationData: animationData,
+  };
+  const loading = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnimation,
   };
 
   useEffect(() => {
@@ -152,6 +158,15 @@ const Intro1 = (props) => {
               {"      "}
               <FormattedMessage id='download' />
             </div>
+            {props.isFileDownloadSuccess === false ? (
+              <Lottie
+                options={defaultOptions}
+                height={40}
+                width={40}
+                isStopped={false}
+                style={{ cursor: "default" }}
+              />
+            ) : null}
           </div>
         </div>
 

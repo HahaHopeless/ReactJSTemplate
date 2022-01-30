@@ -1,4 +1,5 @@
 import "./App.css";
+import "antd/dist/antd.css";
 import React, { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
 import { connect } from "react-redux";

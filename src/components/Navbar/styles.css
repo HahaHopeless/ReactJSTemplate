@@ -14,9 +14,10 @@
   padding: 10px;
   width: 20px;
   border-radius: 10px;
+  color: var(--black) !important;
 }
 .app-link:hover {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
 .app-link.active {
