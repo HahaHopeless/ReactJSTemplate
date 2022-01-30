@@ -1,6 +1,7 @@
 import "./styles.css";
 import React, { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
+import { connect } from "react-redux";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Lottie from "react-lottie";
@@ -8,6 +9,7 @@ import animationData from "../../assets/animations/orbit.json";
 import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import { downloadFile } from "../../redux/actions/home";
 
 const Intro1 = (props) => {
   const defaultOptions = {
@@ -138,7 +140,7 @@ const Intro1 = (props) => {
               Boilerplate
             </h1>
             <br></br>
-            <div className='download'>
+            <div className='download' onClick={() => props.downloadFile()}>
               <FontAwesomeIcon
                 icon={faFileDownload}
                 opacity={0.4}
@@ -159,7 +161,7 @@ const Intro1 = (props) => {
             height={500}
             width={450}
             isStopped={false}
-            style={{ marginTop: "-10vh", zIndex: 99 }}
+            style={{ marginTop: "-10vh", cursor: "default" }}
           />
         </div>
       </div>
@@ -167,4 +169,10 @@ const Intro1 = (props) => {
   );
 };
 
-export default Intro1;
+const mapStateToProps = (state) => {
+  return {
+    isFileDownloadSuccess: state.home.isFileDownloadSuccess,
+  };
+};
+
+export default connect(mapStateToProps, { downloadFile })(Intro1);
