@@ -11,6 +11,7 @@
   transition: all 0.3s ease-in;
   cursor: pointer;
   color: var(--black);
+  margin-top: -10vh;
 }
 .download:hover {
   background: var(--blue);

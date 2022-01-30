@@ -128,6 +128,7 @@ const Intro1 = (props) => {
               style={{
                 fontWeight: "800",
                 fontSize: "14vw",
+                marginTop: "-5vw",
                 marginBottom: "-5vw",
                 textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
                 marginLeft: "-0.35vw",
@@ -158,15 +159,6 @@ const Intro1 = (props) => {
               {"      "}
               <FormattedMessage id='download' />
             </div>
-            {props.isFileDownloadSuccess === false ? (
-              <Lottie
-                options={defaultOptions}
-                height={40}
-                width={40}
-                isStopped={false}
-                style={{ cursor: "default" }}
-              />
-            ) : null}
           </div>
         </div>
 
