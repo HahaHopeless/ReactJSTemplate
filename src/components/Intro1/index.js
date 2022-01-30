@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Lottie from "react-lottie";
-import animationData from "../../assets/animations/developer.json";
+import animationData from "../../assets/animations/orbit.json";
 import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
@@ -100,9 +100,9 @@ const Intro1 = (props) => {
   return (
     <div
       style={{ height: "100vh" }}
-      className='hero vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden'
+      className='hero vw-100 d-flex flex-column align-items-center justify-content-center overflow-hidden container-fluid'
     >
-      <div className='container row '>
+      <div className=' row '>
         <div className='col-md-8'>
           <div style={{ textJustify: "inter-word", textAlign: "left" }}>
             <h1
@@ -113,7 +113,7 @@ const Intro1 = (props) => {
                 textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               }}
             >
-              <FormattedMessage id='helloIm' />
+              <FormattedMessage id='thisIs' />
             </h1>
             <h1
               className='mohsin'
@@ -125,7 +125,7 @@ const Intro1 = (props) => {
                 marginLeft: "-0.35vw",
               }}
             >
-              Mohsin
+              ReactJS
             </h1>
             <h1
               className='kamalakbar'
@@ -135,7 +135,7 @@ const Intro1 = (props) => {
                 textShadow: "0px 0px 10px rgba(47,53,66,0.3)",
               }}
             >
-              Kamal Akbar
+              Boilerplate
             </h1>
             <br></br>
             <div className='download'>
@@ -148,7 +148,7 @@ const Intro1 = (props) => {
                 }}
               />
               {"      "}
-              Download CV
+              <FormattedMessage id='download' />
             </div>
           </div>
         </div>

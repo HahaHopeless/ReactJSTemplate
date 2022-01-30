@@ -5,19 +5,15 @@ a new reducer, just add it in reducers->index.js file.
 
 import rootReducer from "./reducers/index";
 import { createStore, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
+import createSagaMiddleware from "redux-saga";
+import promise from "redux-promise";
+import rootSagas from "./sagas";
 
-const configureStore = () => {
-  const store = createStore(
-    rootReducer,
-    compose(
-      applyMiddleware(thunk),
-      window.__REDUX_DEVTOOLS_EXTENSION__
-        ? window.__REDUX_DEVTOOLS_EXTENSION__()
-        : (f) => f
-    )
-  );
-  return store;
-};
+const sagaMiddleWare = createSagaMiddleware();
+const store = createStore(
+  rootReducer,
+  applyMiddleware(promise, sagaMiddleWare)
+);
+sagaMiddleWare.run(rootSagas);
 
-export default configureStore;
+export default store;
