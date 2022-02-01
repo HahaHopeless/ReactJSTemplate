@@ -11,6 +11,7 @@ import { Timeline } from "gsap/gsap-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { downloadFile } from "../../redux/actions/home";
+import Button from "../Button";
 
 const Intro1 = (props) => {
   const defaultOptions = {
@@ -147,21 +148,12 @@ const Intro1 = (props) => {
               Boilerplate
             </h1>
             <br></br>
-            <div
-              className='download'
+            <Button
+              icon={faFileDownload}
+              iconOpacity={0.4}
+              buttonText={<FormattedMessage id='download' />}
               onClick={() => props.downloadFile({ lang: props.lang })}
-            >
-              <FontAwesomeIcon
-                icon={faFileDownload}
-                opacity={0.4}
-                style={{
-                  fontSize: "20px",
-                  marginRight: "8px",
-                }}
-              />
-              {"      "}
-              <FormattedMessage id='download' />
-            </div>
+            />
           </div>
         </div>
 
@@ -171,7 +163,11 @@ const Intro1 = (props) => {
             height={500}
             width={450}
             isStopped={false}
-            style={{ marginTop: "-10vh", cursor: "default" }}
+            style={{
+              marginTop: "-10vh",
+              cursor: "default",
+              pointerEvents: "none",
+            }}
           />
         </div>
       </div>

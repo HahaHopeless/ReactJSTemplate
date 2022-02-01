@@ -21,5 +21,8 @@
     "thisIs": "This is a",
     "download": "Sample File",
     "downloadFailure": "There was a problem downloading the file 😵",
-    "downloadSuccess": "File downloaded successfully 😊"
+    "downloadSuccess": "File downloaded successfully 😊",
+    "cookiesHeading": "Our use of cookies",
+    "cookiesText": "This website stores basic information in your browser, potentially improving your browsing experience and helping us deliver more relevant information to you.",
+    "cookiesQuestion": "Would you like to acccept our cookies policy?"
 }

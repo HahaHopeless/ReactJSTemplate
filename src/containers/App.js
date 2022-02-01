@@ -8,6 +8,7 @@ import ReactAnime from "react-animejs";
 import Navbar from "../components/Navbar";
 import Routes from "../routes";
 import BackToTop from "../components/BackToTop";
+import Cookies from "../components/Cookies";
 
 const App = (props) => {
   const { Anime, stagger } = ReactAnime;
@@ -35,6 +36,7 @@ const App = (props) => {
             animation={scrollPosition < 200 ? "slide-bottom" : "slide-top"}
           />
         ) : null}
+        <Cookies />
         <Routes />
       </Router>
     </IntlProvider>

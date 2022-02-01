@@ -21,5 +21,8 @@
     "thisIs": "Dies ist ein",
     "download": "Beispieldatei",
     "downloadFailure": "Es gab ein Problem beim Herunterladen der Datei 😵",
-    "downloadSuccess": "Datei erfolgreich heruntergeladen 😊"
+    "downloadSuccess": "Datei erfolgreich heruntergeladen 😊",
+    "cookiesHeading": "Unser Einsatz von Cookies",
+    "cookiesText": "Diese Website speichert grundlegende Informationen in Ihrem Browser, die Ihr Surferlebnis verbessern können und uns helfen, Ihnen relevantere Informationen zu liefern.",
+    "cookiesQuestion": "Möchten Sie unserer Cookie-Politik zustimmen?"
 }

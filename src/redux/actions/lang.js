@@ -3,6 +3,7 @@
 export const SET_GLOBAL_LANGUAGE = "SET_GLOBAL_LANGUAGE";
 
 export const setGlobalLanguage = (payload) => {
+  console.log(navigator.language);
   return {
     type: "SET_GLOBAL_LANGUAGE",
     payload,

@@ -1,0 +1,12 @@
+.ant-input,
+.ant-input-number {
+  border-radius: 8px !important;
+}
+.ant-input:focus,
+.ant-input-focused {
+  border-color: var(--blue) !important;
+  box-shadow: 0 0 0 2px rgb(36, 210, 245 / 20%) !important;
+}
+.ant-input:hover {
+  border-color: var(--blue) !important;
+}
