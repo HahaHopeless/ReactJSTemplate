@@ -27,8 +27,6 @@ const App = (props) => {
     };
   });
 
-  console.log("props.isCookiesDialogVisible: ", props.isCookiesDialogVisible);
-
   return (
     <IntlProvider messages={require(`../translations/${props.lang}.json`)}>
       <Router>

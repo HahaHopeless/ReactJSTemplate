@@ -104,6 +104,14 @@ const Intro1 = (props) => {
         scrub: 1,
       },
     });
+
+    //ScrollTrigger broke react-router. Below is a fix for it.
+    return () => {
+      ScrollTrigger.getAll().forEach((instance) => {
+        instance.kill();
+      });
+      gsap.killTweensOf(window);
+    };
   }, []);
 
   return (

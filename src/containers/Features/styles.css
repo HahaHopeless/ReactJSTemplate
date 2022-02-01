@@ -7,3 +7,11 @@
   margin-top: auto;
   height: 100%;
 }
+.features-page-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 999;
+  font-weight: 900;
+  font-size: 96px;
+}
