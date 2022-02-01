@@ -45,7 +45,7 @@ const App = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    lang: state.lang.lang,
+    lang: state.settings.lang,
   };
 };
 

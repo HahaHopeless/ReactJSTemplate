@@ -1,5 +1,7 @@
 {
     "myApp": "My App",
+    "accept": "Accept",
+    "reject": "Reject",
     "welcome": "Welcome!",
     "builtBy": "Mohsin Kamal Akbar © 2021",
     "login": "Login",

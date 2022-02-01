@@ -25,6 +25,7 @@ const Contact = () => {
         <Form.Item
           name={"name"}
           label='Name'
+          // hasFeedback
           rules={[
             {
               required: true,

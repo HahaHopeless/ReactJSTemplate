@@ -4,9 +4,9 @@ The redux store will pick up all reducers for the app from this file. If you don
 */
 
 import { combineReducers } from "redux";
-import lang from "./lang";
+import settings from "./settings";
 import home from "./home";
 
-const rootReducer = combineReducers({ lang, home });
+const rootReducer = combineReducers({ settings, home });
 
 export default rootReducer;

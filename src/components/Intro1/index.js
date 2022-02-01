@@ -178,7 +178,7 @@ const Intro1 = (props) => {
 const mapStateToProps = (state) => {
   return {
     isFileDownloadSuccess: state.home.isFileDownloadSuccess,
-    lang: state.lang.lang,
+    lang: state.settings.lang,
   };
 };
 
