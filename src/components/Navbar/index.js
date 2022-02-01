@@ -40,12 +40,12 @@ const Navbar = (props) => {
         </li>
         <li>
           <Link
-            to='/about'
+            to='/features'
             className={
-              location.pathname === "/about" ? "app-link active" : "app-link"
+              location.pathname === "/features" ? "app-link active" : "app-link"
             }
           >
-            <FormattedMessage id='About' />{" "}
+            <FormattedMessage id='features' />{" "}
             <span className='sr-only'>(current)</span>
           </Link>
         </li>

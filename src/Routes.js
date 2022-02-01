@@ -3,7 +3,7 @@ import { withRouter, Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import Footer from "./components/Footer";
 import Landing from "./containers/Landing";
-import About from "./containers/About";
+import Features from "./containers/Features";
 import Contact from "./containers/Contact";
 import NotFound from "./containers/NotFound";
 
@@ -12,7 +12,7 @@ const Routes = () => {
     <main>
       <Switch>
         <Route exact path='/' component={Landing} />
-        <Route exact path='/about' component={About} />
+        <Route exact path='/features' component={Features} />
         <Route exact path='/contact' component={Contact} />
         <Route component={NotFound} />
       </Switch>

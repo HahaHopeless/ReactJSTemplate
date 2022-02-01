@@ -27,6 +27,8 @@ const App = (props) => {
     };
   });
 
+  console.log("props.isCookiesDialogVisible: ", props.isCookiesDialogVisible);
+
   return (
     <IntlProvider messages={require(`../translations/${props.lang}.json`)}>
       <Router>
@@ -36,7 +38,10 @@ const App = (props) => {
             animation={scrollPosition < 200 ? "slide-bottom" : "slide-top"}
           />
         ) : null}
-        <Cookies />
+        {props.isCookiesDialogVisible === true ||
+        props.areCookiesAccepted === false ? (
+          <Cookies />
+        ) : null}
         <Routes />
       </Router>
     </IntlProvider>
@@ -46,7 +51,9 @@ const App = (props) => {
 const mapStateToProps = (state) => {
   return {
     lang: state.settings.lang,
+    areCookiesAccepted: state.settings.areCookiesAccepted,
+    isCookiesDialogVisible: state.settings.isCookiesDialogVisible,
   };
 };
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps, {})(App);

@@ -2,6 +2,10 @@ import "./styles.css";
 import React from "react";
 import { connect } from "react-redux";
 import { Button } from "antd";
+import {
+  setCookiesDialogVisibility,
+  setGlobalCookies,
+} from "../../redux/actions/settings";
 import translation_en from "../../translations/en.json";
 import translation_de from "../../translations/de.json";
 
@@ -21,10 +25,19 @@ const Cookies = (props) => {
         {messages[navigator.language.substring(0, 2)]["cookiesQuestion"]}
       </span>
       <div className='d-flex flex-row align-items-center justify-content-around pt-4'>
-        <Button type='primary'>
+        <Button
+          type='primary'
+          onClick={() => {
+            props.setGlobalCookies();
+          }}
+        >
           {messages[navigator.language.substring(0, 2)]["accept"]}
         </Button>
-        <Button>
+        <Button
+          onClick={() => {
+            props.setCookiesDialogVisibility();
+          }}
+        >
           {messages[navigator.language.substring(0, 2)]["reject"]}
         </Button>
       </div>
@@ -35,7 +48,12 @@ const Cookies = (props) => {
 const mapStateToProps = (state) => {
   return {
     lang: state.settings.lang,
+    areCookiesAccepted: state.settings.areCookiesAccepted,
+    isCookiesDialogVisible: state.settings.isCookiesDialogVisible,
   };
 };
 
-export default connect(mapStateToProps, {})(Cookies);
+export default connect(mapStateToProps, {
+  setCookiesDialogVisibility,
+  setGlobalCookies,
+})(Cookies);
