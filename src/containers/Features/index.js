@@ -20,6 +20,7 @@ const Features = () => {
         <h1 className='features-page-title'>
           <FormattedMessage id='Features' />
         </h1>
+        {/* 
         <Lottie
           options={abstractAnimation}
           height={600}
@@ -30,6 +31,7 @@ const Features = () => {
             pointerEvents: "none",
           }}
         />
+         */}
       </div>
     </div>
   );
