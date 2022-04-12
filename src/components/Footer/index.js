@@ -7,7 +7,14 @@ const Footer = () => {
   return (
     <footer className='d-flex justify-content-center footer-container'>
       <p>
-        <FormattedMessage id='builtBy' />
+        <FormattedMessage
+          id='builtBy'
+          values={{
+            b: (...chunks) => (
+              <b style={{ fontWeight: 700, fontSize: "18px" }}>{chunks}</b>
+            ),
+          }}
+        />
       </p>
     </footer>
   );
